@@ -223,6 +223,28 @@ Buat saya, desain itu bukan sekadar tampilan, tapi tentang bagaimana orang bisa 
   <section id="projects" class="max-w-5xl mx-auto px-6 py-20">
     <h3 class="text-2xl font-bold mb-8 text-center">Project</h3>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <!-- Project suitmedia -->
+      <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden group transition">
+        <div class="p-4">
+          <h4 class="font-bold text-lg mb-2">Website SPARRING by Suitmedia</h4>
+          <img src="assets/Sparring.png" alt="Project 1" class="w-full h-48 object-cover rounded mb-3 group-hover:scale-105 group-hover:opacity-90 transition duration-300">
+          <div class="relative">
+            <p class="text-gray-600 mb-2 description-text" id="desc0" style="max-height: 3em; overflow: hidden;">
+              SPARRING adalah platform berbasis website yang dirancang untuk membantu pengguna menemukan partner olahraga, bergabung ke dalam sesi permainan, dan memilih venue secara mudah di kota-kota besar seperti Jakarta. Website ini berfungsi sebagai solusi atas masalah umum dalam aktivitas olahraga sosial: kesulitan mencari partner, informasi komunitas yang tersebar, serta keterbatasan akses ke venue. (dummy)<br/>
+              Peran saya:<br/>
+              - User Research & Problem Mapping<br/>
+              - Membuat Wireframe hingga High-Fidelity Design<br/>
+              - Menentukan Visual Identity<br/>
+              - Merancang Experience Halaman Inti<br/>
+              - Menyusun Copywriting
+            </p>
+            <button onclick="toggleDescription('desc0', this)" class="text-blue-500 hover:text-blue-700 text-sm font-medium">Read More</button>
+          </div>
+          <div class="flex gap-3 mt-4">
+            <button onclick="openModal('assets/SPARRING.pdf')" class="bg-slate-800 text-white px-6 py-2 rounded uppercase text-xs font-semibold hover:bg-slate-900 transition-colors duration-300 shadow-md">Detail Project</button>
+          </div>
+        </div>
+      </div>
       <!-- Project 1 -->
       <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden group transition">
         <div class="p-4">
@@ -263,16 +285,36 @@ Buat saya, desain itu bukan sekadar tampilan, tapi tentang bagaimana orang bisa 
       <!-- Project 3 -->
       <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden group transition">
         <div class="p-4">
-          <h4 class="font-bold text-lg mb-2">Project Graphic Design</h4>
-          <img src="assets/Artboard 1.jpg" alt="Project 3" class="w-full h-48 object-cover rounded mb-3 group-hover:scale-105 group-hover:opacity-90 transition duration-300">
+          <h4 class="font-bold text-lg mb-2">Website Company Profile</h4>
+          <img src="assets/company profile.png" alt="Project 3" class="w-full h-48 object-cover rounded mb-3 group-hover:scale-105 group-hover:opacity-90 transition duration-300">
           <div class="relative">
             <p class="text-gray-600 mb-2 description-text" id="desc3" style="max-height: 3em; overflow: hidden;">
-              Proyek desain visual dan branding untuk GKN, mencakup pembuatan logo, materi marketing, dan pedoman brand identity yang konsisten untuk memperkuat identitas perusahaan.
+             Website company profile untuk Matano Aquarent, penyedia jasa sewa dan perawatan akuarium profesional. Website ini dirancang untuk memperkenalkan layanan perusahaan secara online, meningkatkan visibilitas brand, dan memudahkan calon pelanggan untuk menghubungi serta melihat produk dan portofolio.<br/>Peran saya:<br/>
+             Merancang antarmuka pengguna (UI) yang bersih dan profesional.
+             - Membangun website statis dengan HTML, Tailwind CSS, dan JavaScript dasar.<br/>
+             - Membuat desain responsif untuk tampilan optimal di desktop dan mobile.<br/>
+             - Mengimplementasikan fitur navigasi sticky dan tombol WhatsApp mengambang untuk kemudahan akses.
             </p>
             <button onclick="toggleDescription('desc3', this)" class="text-blue-500 hover:text-blue-700 text-sm font-medium">Read More</button>
           </div>
           <div class="flex gap-3 mt-4">
-            <button onclick="openModal('assets/grafis desain.pdf')" class="bg-slate-800 text-white px-6 py-2 rounded uppercase text-xs font-semibold hover:bg-slate-900 transition-colors duration-300 shadow-md">Detail Project</button>
+            <button onclick="openModal('assets/company profile.pdf')" class="bg-slate-800 text-white px-6 py-2 rounded uppercase text-xs font-semibold hover:bg-slate-900 transition-colors duration-300 shadow-md">Detail Project</button>
+          </div>
+        </div>
+      </div>
+      <!-- Project 4 -->
+      <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden group transition">
+        <div class="p-4">
+          <h4 class="font-bold text-lg mb-2">Project Graphic Design</h4>
+          <img src="assets/Artboard 1.jpg" alt="Project 4" class="w-full h-48 object-cover rounded mb-3 group-hover:scale-105 group-hover:opacity-90 transition duration-300">
+          <div class="relative">
+            <p class="text-gray-600 mb-2 description-text" id="desc4" style="max-height: 3em; overflow: hidden;">
+              Proyek desain visual dan branding untuk GKN, mencakup pembuatan logo, materi marketing, dan pedoman brand identity yang konsisten untuk memperkuat identitas perusahaan.
+            </p>
+            <button onclick="toggleDescription('desc4', this)" class="text-blue-500 hover:text-blue-700 text-sm font-medium">Read More</button>
+          </div>
+          <div class="flex gap-3 mt-4">
+            <button onclick="openModal('assets/Design.pdf')" class="bg-slate-800 text-white px-6 py-2 rounded uppercase text-xs font-semibold hover:bg-slate-900 transition-colors duration-300 shadow-md">Detail Project</button>
           </div>
         </div>
       </div>
