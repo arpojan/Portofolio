@@ -17,7 +17,7 @@ export default function Navbar() {
   });
 
   return (
-    <motion.nav 
+    <motion.nav
       variants={{
         visible: { y: 0, opacity: 1 },
         hidden: { y: "-100%", opacity: 0 },
@@ -26,11 +26,11 @@ export default function Navbar() {
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className="fixed top-0 w-full z-50 flex items-center justify-between py-4 px-8 border-b border-white/5 bg-bg/60 backdrop-blur-xl"
     >
-      <motion.div 
+      <motion.div
         whileHover={{ scale: 1.05 }}
         className="font-display font-bold text-[1.1rem] tracking-tight text-fg-1"
       >
-        arpojan<span className="text-accent-cy">.</span>
+        Portofolio<span className="text-accent-cy">.</span>
       </motion.div>
       <ul className="hidden md:flex items-center gap-8">
         {[
@@ -46,10 +46,10 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
-      <motion.a 
+      <motion.a
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        href="#contact" 
+        href="#contact"
         className="py-2 px-5 bg-sur border border-white/10 hover:border-accent-cy/50 text-fg-1 rounded-full no-underline text-[0.78rem] font-medium transition-all"
       >
         Get in touch

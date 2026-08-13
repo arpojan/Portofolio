@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 
 export default function Hero() {
   const [roleText, setRoleText] = useState("");
-  const fullText = "Fullstack Developer & UI/UX Designer";
-  
+  const fullText = ">Fullstack Developer | Graphic Designer";
+
   useEffect(() => {
     let i = 0;
     const typingInterval = setInterval(() => {
@@ -20,19 +20,19 @@ export default function Hero() {
   return (
     <section className="relative min-h-[90vh] px-8 pt-32 pb-16 overflow-hidden flex items-center justify-center border-b border-white/5">
       <div className="mesh-bg opacity-30"></div>
-      
+
       <div className="relative z-10 w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="flex flex-col items-start text-left">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="mb-6 inline-flex items-center gap-2 py-1.5 px-3.5 rounded-full border border-white/10 bg-sur/50 backdrop-blur-md"
           >
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-            <span className="text-[0.65rem] font-mono text-fg-2 uppercase tracking-widest">Available for work</span>
+            <span className="text-[0.65rem] font-mono text-fg-2 uppercase tracking-widest">Available for Work</span>
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -43,8 +43,8 @@ export default function Hero() {
               Arvauzan Putra
             </span>
           </motion.h1>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -56,7 +56,7 @@ export default function Hero() {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -70,8 +70,8 @@ export default function Hero() {
             </a>
           </motion.div>
         </div>
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
@@ -85,10 +85,10 @@ export default function Hero() {
               <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
             </div>
             <p><span className="text-[#c678dd]">const</span> <span className="text-[#e5c07b]">developer</span> = {'{'}</p>
-            <p className="pl-4">name: <span className="text-[#98c379]">'Arvauzan Putra'</span>,</p>
-            <p className="pl-4">role: <span className="text-[#98c379]">'Fullstack Engineer'</span>,</p>
-            <p className="pl-4">skills: [<span className="text-[#98c379]">'React'</span>, <span className="text-[#98c379]">'Next.js'</span>, <span className="text-[#98c379]">'Laravel'</span>],</p>
-            <p className="pl-4">passion: <span className="text-[#98c379]">'Building beautiful web apps'</span></p>
+            <p className="pl-4">name: <span className="text-[#98c379]">'Arvauzan Putra Kurniawan'</span>,</p>
+            <p className="pl-4">role: <span className="text-[#98c379]">'Fullstack Developer'</span>,</p>
+            <p className="pl-4">skills: [<span className="text-[#98c379]">'Laravel'</span>, <span className="text-[#98c379]">'React'</span>, <span className="text-[#98c379]">'PHP'</span>,]</p>
+            <p className="pl-4">passion: <span className="text-[#98c379]">'Building clean, functional web applications'</span></p>
             <p>{'}'};</p>
             <p className="mt-4"><span className="text-[#c678dd]">export default</span> <span className="text-[#e5c07b]">developer</span>;</p>
           </div>

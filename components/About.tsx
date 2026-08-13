@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function About() {
   const fadeUp = {
@@ -9,10 +10,10 @@ export default function About() {
   };
 
   const cards = [
-    { title: "Fullstack Development", desc: "Laravel · React · Inertia.js · Next.js · API", icon: "ti-code", colorClass: "text-accent-cy", bgClass: "bg-accent-cy/10" },
-    { title: "UI/UX & Design", desc: "Figma · Photoshop · Illustrator · Tailwind", icon: "ti-palette", colorClass: "text-[#818CF8]", bgClass: "bg-[#818CF8]/10" },
-    { title: "Hardware Integration", desc: "ESP32 · IoT · RESTful API · Sensor", icon: "ti-cpu", colorClass: "text-accent-cy", bgClass: "bg-accent-cy/10" },
-    { title: "Tools & Workflow", desc: "Git · MySQL · Spatie · Vite · Vercel", icon: "ti-brand-git", colorClass: "text-[#818CF8]", bgClass: "bg-[#818CF8]/10" },
+    { title: "Fullstack Development", skills: "Laravel · React · Inertia.js · Next.js · API", icon: "ti-code", colorClass: "text-[#818CF8]", bgClass: "bg-[#818CF8]/10" },
+    { title: "UI/UX & Design", skills: "Figma · Photoshop · Illustrator · Tailwind", icon: "ti-color-swatch", colorClass: "text-[#A78BFA]", bgClass: "bg-[#A78BFA]/10" },
+    { title: "Hardware Integration", skills: "ESP32 · IoT · RESTful API · Sensor", icon: "ti-cpu", colorClass: "text-[#60A5FA]", bgClass: "bg-[#60A5FA]/10" },
+    { title: "Tools & Workflow", skills: "Git · MySQL · Spatie · Vite · Vercel", icon: "ti-tool", colorClass: "text-[#94A3B8]", bgClass: "bg-[#94A3B8]/10" }
   ];
 
   return (
@@ -31,49 +32,72 @@ export default function About() {
           Who Am I?
         </motion.h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-7 items-start">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
-          <p className="text-fg-2 text-[0.84rem] leading-[1.8] mb-3.5">
-            Saya seorang <strong className="text-fg-1 font-semibold">Fullstack Developer</strong> dengan pengalaman membangun aplikasi web end-to-end — dari database dan backend logic, hingga tampilan antarmuka yang bersih dan intuitif.
-          </p>
-          <p className="text-fg-2 text-[0.84rem] leading-[1.8] mb-3.5">
-            Terbiasa bekerja dengan <strong className="text-fg-1 font-semibold">Laravel, React, dan Inertia.js</strong>. Kemampuan desain di <strong className="text-fg-1 font-semibold">Figma</strong> membuat saya bisa menjembatani kebutuhan teknis dan visual dalam satu tim.
-          </p>
-          <p className="text-fg-2 text-[0.84rem] leading-[1.8] mb-3.5">
-            Menyelesaikan studi Teknik Informatika di <strong className="text-fg-1 font-semibold">Universitas Gunadarma</strong> (GPA 3.62), fokus pada sistem web dan IoT.
-          </p>
-          <br />
-          <motion.a 
-            whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(14, 165, 233, 0.4)" }}
-            whileTap={{ scale: 0.95 }}
-            href="https://arpojan.github.io/assets/CV%20Arvauzan.pdf" 
-            className="inline-flex items-center gap-1.5 py-2.5 px-6 bg-accent-cy text-bg font-bold text-[0.78rem] rounded-md no-underline transition-all"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 mt-7 items-stretch">
+          
+          {/* 1. Profile Photo */}
+          <motion.div 
+            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}
+            className="lg:col-span-4 relative rounded-[16px] overflow-hidden border border-white/10 group aspect-[4/5] bg-sur-2 shadow-xl"
           >
-            <i className="ti ti-download" aria-hidden="true"></i> Download CV
-          </motion.a>
-        </motion.div>
+            <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent z-10"></div>
+            <Image 
+              src="https://placehold.co/600x800/13131A/4F46E5?text=Profile+Photo" 
+              alt="Arvauzan Putra" 
+              fill 
+              className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
+              unoptimized 
+            />
+          </motion.div>
 
-        <div className="flex flex-col gap-3">
-          {cards.map((card, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-            >
-              <div className="bg-sur/50 border border-black/5 hover:border-black/10 hover:bg-sur transition-colors rounded-[8px] p-4 flex items-center gap-3">
-                <div className={`w-9 h-9 rounded-md flex items-center justify-center text-[1rem] shrink-0 ${card.bgClass} ${card.colorClass}`}>
-                  <i className={`ti ${card.icon}`} aria-hidden="true"></i>
+          {/* 2. Text Content */}
+          <motion.div 
+            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}
+            className="lg:col-span-4 flex flex-col justify-center"
+          >
+            <p className="text-fg-2 text-[0.84rem] leading-[1.8] mb-4">
+              Saya seorang <strong className="text-fg-1 font-semibold">Fullstack Developer</strong> dengan pengalaman membangun aplikasi web end-to-end — dari database dan backend logic, hingga tampilan antarmuka yang bersih dan intuitif.
+            </p>
+            <p className="text-fg-2 text-[0.84rem] leading-[1.8] mb-4">
+              Terbiasa bekerja dengan <strong className="text-fg-1 font-semibold">Laravel, React, dan Inertia.js</strong>. Kemampuan desain di <strong className="text-fg-1 font-semibold">Figma</strong> membuat saya bisa menjembatani kebutuhan teknis dan visual dalam satu tim.
+            </p>
+            <p className="text-fg-2 text-[0.84rem] leading-[1.8] mb-6">
+              Menyelesaikan studi Teknik Informatika di <strong className="text-fg-1 font-semibold">Universitas Gunadarma</strong> (GPA 3.62), fokus pada sistem web dan IoT.
+            </p>
+            <div className="mt-auto">
+              <motion.a 
+                whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(14, 165, 233, 0.4)" }}
+                whileTap={{ scale: 0.95 }}
+                href="https://arpojan.github.io/assets/CV%20Arvauzan.pdf" 
+                className="inline-flex items-center gap-1.5 py-2.5 px-6 bg-accent-cy text-bg font-bold text-[0.78rem] rounded-md no-underline transition-all"
+              >
+                <i className="ti ti-download text-[1rem]"></i> Download CV
+              </motion.a>
+            </div>
+          </motion.div>
+          
+          {/* 3. Skill Cards */}
+          <div className="lg:col-span-4 flex flex-col gap-3">
+            {cards.map((card, i) => (
+              <motion.div 
+                key={card.title}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="h-full"
+              >
+                <div className="h-full bg-sur/50 border border-white/5 hover:border-white/10 hover:bg-sur transition-colors rounded-[8px] p-4 flex items-center gap-3">
+                  <div className={`w-9 h-9 rounded-md flex items-center justify-center text-[1rem] shrink-0 ${card.bgClass} ${card.colorClass}`}>
+                    <i className={`ti ${card.icon}`} aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h3 className="font-display font-bold text-[0.85rem] text-fg-1">{card.title}</h3>
+                    <p className="text-[0.65rem] text-fg-3 font-mono mt-1">{card.skills}</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-[0.8rem] font-semibold mb-0.5 text-fg-1">{card.title}</h4>
-                  <p className="text-[0.7rem] text-fg-3">{card.desc}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
