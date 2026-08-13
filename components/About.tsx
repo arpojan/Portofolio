@@ -16,19 +16,20 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-12 px-8 border-b border-black/5 bg-sur relative overflow-hidden">
-      <motion.p 
-        initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}
-        className="font-mono text-[0.65rem] text-accent-cy tracking-[0.15em] uppercase mb-2"
-      >
-        // about me
-      </motion.p>
-      <motion.h2 
-        initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}
-        className="font-display text-[clamp(1.4rem,3vw,2rem)] font-bold tracking-[-0.02em] mb-2.5"
-      >
-        Dev by skill,<br />designer by instinct.
-      </motion.h2>
+    <section id="about" className="py-24 px-8 border-b border-white/5 bg-sur relative overflow-hidden">
+      <div className="max-w-6xl mx-auto">
+        <motion.p 
+          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}
+          className="font-mono text-[0.65rem] text-accent-cy tracking-[0.15em] uppercase mb-3 text-center"
+        >
+          // 01. About
+        </motion.p>
+        <motion.h2 
+          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}
+          className="font-display text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight mb-12 text-center"
+        >
+          Who Am I?
+        </motion.h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-7 items-start">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
@@ -72,6 +73,7 @@ export default function About() {
               </div>
             </motion.div>
           ))}
+        </div>
         </div>
       </div>
     </section>

@@ -2,26 +2,48 @@
 @config "../tailwind.config.ts";
 
 @layer base {
+  :root {
+    --bg: #0A0A0F;
+    --sur: #13131A;
+    --sur-2: #1C1C26;
+    --fg-1: #F8FAFC;
+    --fg-2: #94A3B8;
+    --fg-3: #64748b;
+    --accent-cy: #4F46E5;
+  }
   body {
     @apply bg-bg text-fg-1 font-sans leading-relaxed;
+    color-scheme: dark;
   }
 }
 
 @layer utilities {
-  .pf-dot {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: currentColor;
-    animation: pfp 2s infinite;
+  .mesh-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(255, 107, 107, 0.1) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(79, 70, 229, 0.1) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, rgba(255, 107, 107, 0.15) 0px, transparent 50%);
+    animation: mesh-morph 15s ease-in-out infinite alternate;
+  }
+  
+  .glow-mask {
+    background: radial-gradient(
+      600px circle at var(--mouse-x, 0) var(--mouse-y, 0),
+      rgba(255, 255, 255, 0.06),
+      transparent 40%
+    );
   }
 }
 
-@keyframes pfp {
-  0%, 100% {
-    opacity: 1;
+@keyframes mesh-morph {
+  0% {
+    background-position: 0% 0%;
   }
-  50% {
-    opacity: 0.3;
+  100% {
+    background-position: 100% 100%;
   }
 }

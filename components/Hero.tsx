@@ -1,90 +1,99 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { type: "spring" as const, stiffness: 100 } },
-  };
+  const [roleText, setRoleText] = useState("");
+  const fullText = "Fullstack Developer & UI/UX Designer";
+  
+  useEffect(() => {
+    let i = 0;
+    const typingInterval = setInterval(() => {
+      setRoleText(fullText.slice(0, i));
+      i++;
+      if (i > fullText.length) clearInterval(typingInterval);
+    }, 50);
+    return () => clearInterval(typingInterval);
+  }, []);
 
   return (
-    <section className="pt-20 px-8 pb-16 relative overflow-hidden border-b border-black/5 flex flex-col items-center text-center">
+    <section className="relative min-h-[90vh] px-8 pt-32 pb-16 overflow-hidden flex items-center justify-center border-b border-white/5">
+      <div className="mesh-bg opacity-30"></div>
+      
+      <div className="relative z-10 w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="flex flex-col items-start text-left">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-6 inline-flex items-center gap-2 py-1.5 px-3.5 rounded-full border border-white/10 bg-sur/50 backdrop-blur-md"
+          >
+            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            <span className="text-[0.65rem] font-mono text-fg-2 uppercase tracking-widest">Available for work</span>
+          </motion.div>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="font-display text-[clamp(2.5rem,5.5vw,4.5rem)] font-bold tracking-tight leading-[1.1] mb-6"
+          >
+            Hi, I'm <br />
+            <span className="bg-gradient-to-r from-accent-cy to-accent-coral bg-clip-text text-transparent">
+              Arvauzan Putra
+            </span>
+          </motion.h1>
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="h-8 mb-8"
+          >
+            <p className="font-mono text-[0.85rem] md:text-[0.95rem] text-fg-2">
+              <span className="text-accent-coral">&gt;</span> {roleText}
+              <span className="animate-pulse">_</span>
+            </p>
+          </motion.div>
 
-      <motion.div 
-        className="relative z-10"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.div variants={itemVariants} className="flex justify-center gap-2.5 mb-6 flex-wrap">
-          <motion.span 
-            whileHover={{ scale: 1.05, boxShadow: "0 0 10px rgba(14, 165, 233, 0.2)" }}
-            className="inline-flex items-center gap-1.5 py-1 px-3 rounded-full font-mono text-[0.68rem] font-medium border text-accent-cy border-accent-cy/30 bg-accent-cy/10 backdrop-blur-sm transition-colors cursor-default"
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="flex flex-wrap gap-4"
           >
-            <span className="pf-dot"></span> Fullstack Developer
-          </motion.span>
-          <motion.span 
-            whileHover={{ scale: 1.05, boxShadow: "0 0 10px rgba(129, 140, 248, 0.2)" }}
-            className="inline-flex items-center gap-1.5 py-1 px-3 rounded-full font-mono text-[0.68rem] font-medium border text-[#818CF8] border-[#818CF8]/30 bg-[#818CF8]/10 backdrop-blur-sm transition-colors cursor-default"
-          >
-            <span className="pf-dot text-[#818CF8]"></span> UI/UX Designer
-          </motion.span>
-        </motion.div>
-        
-        <motion.h1 variants={itemVariants} className="font-display text-[clamp(2.2rem,5vw,3.5rem)] font-bold leading-[1.15] tracking-[-0.02em] mb-5">
-          Building <span className="text-accent-cy">Scalable</span><br />Web Applications
-        </motion.h1>
-        
-        <motion.p variants={itemVariants} className="text-fg-2 max-w-[500px] mx-auto mb-8 text-[0.9rem] leading-[1.75]">
-          Hi, I'm Arvauzan Putra — a Fullstack Developer specializing in Laravel & React. I craft clean, efficient code and intuitive user interfaces.
-        </motion.p>
-        
-        <motion.div variants={itemVariants} className="flex justify-center gap-3 flex-wrap mb-12">
-          <motion.a 
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.95 }}
-            href="#projects" 
-            className="py-2.5 px-6 bg-accent-cy text-bg font-bold text-[0.84rem] rounded-md no-underline transition-all"
-          >
-            View My Work
-          </motion.a>
-          <motion.a 
-            whileHover={{ scale: 1.02, backgroundColor: "rgba(0, 0, 0, 0.05)" }}
-            whileTap={{ scale: 0.95 }}
-            href="#contact" 
-            className="py-2.5 px-6 border border-black/5 text-fg-1 font-medium text-[0.84rem] rounded-md no-underline backdrop-blur-sm transition-all"
-          >
-            Contact Me
-          </motion.a>
-        </motion.div>
-        
-        <motion.div variants={itemVariants} className="flex justify-center gap-10 sm:gap-16 border-t border-black/5 pt-8 inline-flex mx-auto">
-          <motion.div whileHover={{ y: -3 }}>
-            <div className="font-display text-[1.6rem] font-bold">5<span className="text-accent-cy">+</span></div>
-            <div className="text-[0.68rem] text-fg-3 mt-0.5">Projects Built</div>
+            <a href="#projects" className="py-3 px-7 bg-fg-1 text-bg rounded-[4px] font-medium text-[0.85rem] transition-all hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:-translate-y-0.5">
+              View Projects
+            </a>
+            <a href="#contact" className="py-3 px-7 bg-sur border border-white/10 text-fg-1 rounded-[4px] font-medium text-[0.85rem] transition-all hover:border-accent-cy/50 hover:bg-white/5 hover:-translate-y-0.5">
+              Contact Me
+            </a>
           </motion.div>
-          <motion.div whileHover={{ y: -3 }}>
-            <div className="font-display text-[1.6rem] font-bold">3<span className="text-accent-cy">+</span></div>
-            <div className="text-[0.68rem] text-fg-3 mt-0.5">Years Learning</div>
-          </motion.div>
-          <motion.div whileHover={{ y: -3 }}>
-            <div className="font-display text-[1.6rem] font-bold">3.62</div>
-            <div className="text-[0.68rem] text-fg-3 mt-0.5">GPA</div>
-          </motion.div>
+        </div>
+        
+        <motion.div 
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          className="hidden lg:block relative"
+        >
+          <div className="absolute -inset-1 bg-gradient-to-r from-accent-cy to-accent-coral opacity-20 blur-xl rounded-[12px] group-hover:opacity-40 transition-opacity"></div>
+          <div className="relative bg-[#0d0d12] border border-white/10 rounded-[12px] p-6 shadow-2xl font-mono text-[0.75rem] leading-loose text-fg-2">
+            <div className="flex gap-2 mb-4 border-b border-white/5 pb-4">
+              <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+            </div>
+            <p><span className="text-[#c678dd]">const</span> <span className="text-[#e5c07b]">developer</span> = {'{'}</p>
+            <p className="pl-4">name: <span className="text-[#98c379]">'Arvauzan Putra'</span>,</p>
+            <p className="pl-4">role: <span className="text-[#98c379]">'Fullstack Engineer'</span>,</p>
+            <p className="pl-4">skills: [<span className="text-[#98c379]">'React'</span>, <span className="text-[#98c379]">'Next.js'</span>, <span className="text-[#98c379]">'Laravel'</span>],</p>
+            <p className="pl-4">passion: <span className="text-[#98c379]">'Building beautiful web apps'</span></p>
+            <p>{'}'};</p>
+            <p className="mt-4"><span className="text-[#c678dd]">export default</span> <span className="text-[#e5c07b]">developer</span>;</p>
+          </div>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 }

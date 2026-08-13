@@ -9,18 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: '#F8FAFC',
-        sur: '#FFFFFF',
-        'sur-2': '#F1F5F9',
-        'fg-1': '#0F172A',
-        'fg-2': '#475569',
-        'fg-3': '#94A3B8',
-        'accent-cy': '#0EA5E9', // Cheerful Sky Blue
+        bg: '#0A0A0F',
+        sur: '#13131A',
+        'sur-2': '#1C1C26',
+        'fg-1': '#F8FAFC',
+        'fg-2': '#94A3B8',
+        'fg-3': '#64748b',
+        'accent-cy': '#4F46E5', // Indigo
+        'accent-coral': '#FF6B6B',
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
-        display: ["Inter", "sans-serif"],
-        mono: ["JetBrains Mono", "monospace"],
+        display: ["Space Grotesk", "sans-serif"],
+        mono: ["Space Mono", "monospace"],
       },
     },
   },
