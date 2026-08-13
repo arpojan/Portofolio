@@ -13,10 +13,11 @@
     inset: 0;
     z-index: 0;
     background-image: 
-      radial-gradient(circle at 15% 60%, rgba(0, 212, 255, 0.07) 0%, transparent 50%),
-      radial-gradient(circle at 85% 20%, rgba(79, 142, 247, 0.09) 0%, transparent 45%),
+      radial-gradient(circle at 15% 60%, rgba(0, 212, 255, 0.08) 0%, transparent 45%),
+      radial-gradient(circle at 85% 20%, rgba(79, 142, 247, 0.1) 0%, transparent 40%),
       radial-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px);
     background-size: 100% 100%, 100% 100%, 28px 28px;
+    animation: glow-move 15s ease-in-out infinite alternate;
   }
 
   .pf-dot {
@@ -25,6 +26,15 @@
     border-radius: 50%;
     background: currentColor;
     animation: pfp 2s infinite;
+  }
+}
+
+@keyframes glow-move {
+  0% {
+    background-position: 0% 0%, 0% 0%, 0 0;
+  }
+  100% {
+    background-position: 3% 5%, -3% -5%, 0 0;
   }
 }
 
