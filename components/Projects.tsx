@@ -63,6 +63,7 @@ export default function Projects() {
             { img: "home leet.png", tag: "Personal Project", title: "Leet — E-Commerce", desc: "Website e-commerce lengkap. Figma → Laravel, konsisten dari desain ke kode.", tech: ["Laravel", "Figma", "Tailwind"], link: "more leet.pdf" },
             { img: "company profile.png", tag: "Personal Project", title: "Matano — Company Profile", desc: "Website company profile penyedia jasa sewa akuarium profesional.", tech: ["HTML/CSS", "JavaScript"], link: "company profile.pdf" },
             { img: "Artboard 1.jpg", tag: "Freelance · Graphic Design", title: "GKN — Brand Identity", desc: "Logo, materi marketing, dan panduan brand identity untuk GKN.", tech: ["Photoshop", "Illustrator"], link: "Design.pdf", tagColor: "text-[#818CF8]" }
+          ].map((project, i) => (
             <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} transition={{ delay: i * 0.1 }}>
                 <div className="group h-full bg-sur/50 border border-white/5 rounded-[8px] overflow-hidden hover:border-white/10 hover:bg-sur transition-colors flex flex-col">
                   <div className="h-[160px] overflow-hidden bg-sur-2 flex items-center justify-center border-b border-white/5">
