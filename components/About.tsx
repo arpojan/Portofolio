@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Tilt from "react-parallax-tilt";
 
 export default function About() {
   const fadeUp = {
@@ -62,17 +61,15 @@ export default function About() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} transitionSpeed={2000}>
-                <div className="bg-sur-2/80 backdrop-blur-sm border border-white/5 hover:border-white/10 transition-colors rounded-[9px] p-3.5 flex items-center gap-3 shadow-lg">
-                  <div className={`w-8 h-8 rounded-md flex items-center justify-center text-[0.95rem] shrink-0 ${card.bgClass} ${card.colorClass}`}>
-                    <i className={`ti ${card.icon}`} aria-hidden="true"></i>
-                  </div>
-                  <div>
-                    <h4 className="text-[0.77rem] font-semibold mb-0.5 text-fg-1">{card.title}</h4>
-                    <p className="text-[0.68rem] text-fg-3">{card.desc}</p>
-                  </div>
+              <div className="bg-sur/50 border border-white/5 hover:border-white/10 hover:bg-sur transition-colors rounded-[8px] p-4 flex items-center gap-3">
+                <div className={`w-9 h-9 rounded-md flex items-center justify-center text-[1rem] shrink-0 ${card.bgClass} ${card.colorClass}`}>
+                  <i className={`ti ${card.icon}`} aria-hidden="true"></i>
                 </div>
-              </Tilt>
+                <div>
+                  <h4 className="text-[0.8rem] font-semibold mb-0.5 text-fg-1">{card.title}</h4>
+                  <p className="text-[0.7rem] text-fg-3">{card.desc}</p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

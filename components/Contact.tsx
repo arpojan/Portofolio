@@ -23,11 +23,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-12 px-8 relative overflow-hidden">
-      {/* Decorative Ornaments */}
-      <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-accent-cy/5 rounded-full blur-[150px] z-0 pointer-events-none"></div>
-
-      <div className="max-w-[540px] relative z-10">
+    <section id="contact" className="py-12 px-8 relative overflow-hidden bg-bg">
+      <div className="max-w-[540px] mx-auto text-center relative z-10">
         <motion.p 
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}
           className="font-mono text-[0.65rem] text-accent-cy tracking-[0.15em] uppercase mb-2"
@@ -49,7 +46,7 @@ export default function Contact() {
         
         <motion.div 
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants}
-          className="flex gap-3 flex-wrap my-6"
+          className="flex justify-center gap-3 flex-wrap my-8"
         >
           {[
             { icon: "ti-mail", text: "arvauzanp@gmail.com", href: "mailto:arvauzanp@gmail.com" },
@@ -59,10 +56,10 @@ export default function Contact() {
             <motion.a 
               key={i}
               variants={fadeUp}
-              whileHover={{ scale: 1.05, y: -2, borderColor: "rgba(0, 212, 255, 0.4)", color: "#00D4FF", backgroundColor: "rgba(0, 212, 255, 0.05)" }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               href={link.href} target={link.text !== "arvauzanp@gmail.com" ? "_blank" : undefined} rel={link.text !== "arvauzanp@gmail.com" ? "noopener noreferrer" : undefined} 
-              className="flex items-center gap-2 py-2 px-4 rounded-[7px] border border-white/5 text-fg-2 no-underline text-[0.77rem] bg-sur/80 backdrop-blur-sm transition-all duration-300"
+              className="flex items-center gap-2 py-2 px-4 rounded-[4px] border border-white/5 text-fg-2 no-underline text-[0.8rem] bg-sur hover:bg-white/5 hover:text-fg-1 transition-colors"
             >
               <i className={`ti ${link.icon} text-[1.1rem]`} aria-hidden="true"></i> {link.text}
             </motion.a>
@@ -70,61 +67,50 @@ export default function Contact() {
         </motion.div>
         
         <motion.form 
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.5 }}
           onSubmit={handleSubmit} 
-          className="bg-sur/80 backdrop-blur-md border border-white/5 rounded-[12px] p-6 shadow-2xl relative"
+          className="bg-sur/50 border border-white/5 rounded-[8px] p-6 text-left"
         >
-          {/* Animated Glowing border effect for form */}
-          <div className="absolute inset-0 rounded-[12px] border border-accent-cy/0 transition-colors duration-500 pointer-events-none" style={{ borderColor: focusedField ? "rgba(0, 212, 255, 0.2)" : "rgba(0,0,0,0)" }}></div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div className="flex flex-col gap-1.5">
-              <label className="text-[0.68rem] text-fg-3 font-medium transition-colors" style={{ color: focusedField === "name" ? "#00D4FF" : undefined }}>Name</label>
+              <label className="text-[0.75rem] text-fg-2 font-medium">Name</label>
               <input 
                 type="text" 
                 placeholder="Your name" 
-                className="bg-sur-2/80 border border-white/5 text-fg-1 rounded-[7px] py-2.5 px-4 text-[0.78rem] font-sans outline-none transition-all duration-300 focus:border-accent-cy/50 focus:bg-sur-2 focus:shadow-[0_0_15px_rgba(0,212,255,0.1)]"
+                className="bg-bg border border-white/5 text-fg-1 rounded-[4px] py-2.5 px-3 text-[0.85rem] font-sans outline-none focus:border-accent-cy transition-colors"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                onFocus={() => setFocusedField("name")}
-                onBlur={() => setFocusedField(null)}
               />
             </div>
             <div className="flex flex-col gap-1.5">
-              <label className="text-[0.68rem] text-fg-3 font-medium transition-colors" style={{ color: focusedField === "email" ? "#00D4FF" : undefined }}>Email</label>
+              <label className="text-[0.75rem] text-fg-2 font-medium">Email</label>
               <input 
                 type="email" 
                 placeholder="your@email.com" 
-                className="bg-sur-2/80 border border-white/5 text-fg-1 rounded-[7px] py-2.5 px-4 text-[0.78rem] font-sans outline-none transition-all duration-300 focus:border-accent-cy/50 focus:bg-sur-2 focus:shadow-[0_0_15px_rgba(0,212,255,0.1)]"
+                className="bg-bg border border-white/5 text-fg-1 rounded-[4px] py-2.5 px-3 text-[0.85rem] font-sans outline-none focus:border-accent-cy transition-colors"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                onFocus={() => setFocusedField("email")}
-                onBlur={() => setFocusedField(null)}
               />
             </div>
           </div>
-          <div className="flex flex-col gap-1.5 relative z-10">
-            <label className="text-[0.68rem] text-fg-3 font-medium transition-colors" style={{ color: focusedField === "message" ? "#00D4FF" : undefined }}>Message</label>
+          <div className="flex flex-col gap-1.5 mb-5">
+            <label className="text-[0.75rem] text-fg-2 font-medium">Message</label>
             <textarea 
               placeholder="Tell me about your project..." 
-              className="bg-sur-2/80 border border-white/5 text-fg-1 rounded-[7px] py-3 px-4 text-[0.78rem] font-sans outline-none transition-all duration-300 focus:border-accent-cy/50 focus:bg-sur-2 focus:shadow-[0_0_15px_rgba(0,212,255,0.1)] resize-y min-h-[100px]"
+              className="bg-bg border border-white/5 text-fg-1 rounded-[4px] py-3 px-3 text-[0.85rem] font-sans outline-none focus:border-accent-cy transition-colors resize-y min-h-[120px]"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              onFocus={() => setFocusedField("message")}
-              onBlur={() => setFocusedField(null)}
             ></textarea>
           </div>
-          <motion.button 
-            whileHover={{ scale: 1.02, boxShadow: "0 0 20px rgba(0, 212, 255, 0.4)" }}
-            whileTap={{ scale: 0.98 }}
+          <button 
             type="submit" 
-            className="w-full mt-5 p-3 bg-accent-cy text-bg font-bold text-[0.84rem] border-none rounded-[7px] cursor-pointer transition-all relative z-10"
+            className="w-full p-2.5 bg-accent-cy hover:bg-blue-600 text-white font-medium text-[0.85rem] rounded-[4px] transition-colors"
           >
-            Send Message <i className="ti ti-arrow-right ml-1"></i>
-          </motion.button>
+            Send Message
+          </button>
         </motion.form>
       </div>
     </section>
