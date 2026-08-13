@@ -1,0 +1,242 @@
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+.pf{--bg:#060D1F;--sur:#0F1A35;--sur2:#172141;--teal:#5EEAD4;--vio:#818CF8;--fg:#F1F5F9;--fg2:#94A3B8;--fg3:#3D4D66;--br:rgba(255,255,255,0.07);background:var(--bg);color:var(--fg);font-family:'Inter',sans-serif;line-height:1.6}
+.pf *,.pf *::before,.pf *::after{margin:0;padding:0;box-sizing:border-box}
+.pf-nav{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 2rem;border-bottom:1px solid var(--br);background:var(--bg)}
+.pf-logo{font-family:'JetBrains Mono',monospace;color:var(--teal);font-size:.95rem;letter-spacing:.05em}
+.pf-nav-links{display:flex;gap:1.5rem;list-style:none}
+.pf-nav-links a{color:var(--fg2);text-decoration:none;font-size:.78rem;font-weight:500}
+.pf-hire{padding:.4rem 1rem;background:var(--teal);color:var(--bg);border-radius:6px;text-decoration:none;font-size:.78rem;font-weight:700}
+.pf-hero{padding:3.5rem 2rem 3rem;position:relative;overflow:hidden;border-bottom:1px solid var(--br)}
+.pf-hdots{position:absolute;inset:0;z-index:0;background-image:radial-gradient(circle at 15% 60%,rgba(94,234,212,.07) 0%,transparent 50%),radial-gradient(circle at 85% 20%,rgba(129,140,248,.09) 0%,transparent 45%),radial-gradient(rgba(255,255,255,.022) 1px,transparent 1px);background-size:100% 100%,100% 100%,28px 28px}
+.pf-hi{position:relative;z-index:1}
+.pf-pills{display:flex;gap:.6rem;margin-bottom:1.4rem;flex-wrap:wrap}
+.pf-pill{display:inline-flex;align-items:center;gap:.4rem;padding:.28rem .75rem;border-radius:99px;font-family:'JetBrains Mono',monospace;font-size:.68rem;font-weight:500;border:1px solid}
+.pf-pt{color:var(--teal);border-color:rgba(94,234,212,.3);background:rgba(94,234,212,.07)}
+.pf-pv{color:var(--vio);border-color:rgba(129,140,248,.3);background:rgba(129,140,248,.07)}
+.pf-dot{width:5px;height:5px;border-radius:50%;background:currentColor;animation:pfp 2s infinite}
+@keyframes pfp{0%,100%{opacity:1}50%{opacity:.3}}
+.pf-h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.9rem,4.5vw,3rem);font-weight:700;line-height:1.1;letter-spacing:-.02em;margin-bottom:1rem}
+.pf-h1 em{font-style:normal;color:var(--teal)}
+.pf-sub{color:var(--fg2);max-width:480px;margin-bottom:1.75rem;font-size:.875rem;line-height:1.75}
+.pf-acts{display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:2.25rem}
+.pf-bp{padding:.65rem 1.6rem;background:var(--teal);color:var(--bg);font-weight:700;font-size:.84rem;border-radius:7px;text-decoration:none;transition:opacity .2s}
+.pf-bp:hover{opacity:.85}
+.pf-bo{padding:.65rem 1.6rem;border:1px solid var(--br);color:var(--fg);font-weight:500;font-size:.84rem;border-radius:7px;text-decoration:none}
+.pf-stats{display:flex;gap:2rem}
+.pf-sn{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700}
+.pf-sn span{color:var(--teal)}
+.pf-sl{font-size:.68rem;color:var(--fg3);margin-top:.1rem}
+.pf-sec{padding:3rem 2rem;border-bottom:1px solid var(--br)}
+.pf-sec.sur{background:var(--sur)}
+.pf-lbl{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--teal);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem}
+.pf-sh{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:700;letter-spacing:-.02em;margin-bottom:.6rem}
+.pf-ss{color:var(--fg2);font-size:.84rem;line-height:1.7;max-width:460px}
+.pf-ag{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1.75rem;align-items:start}
+.pf-at p{color:var(--fg2);font-size:.84rem;line-height:1.8;margin-bottom:.9rem}
+.pf-at p strong{color:var(--fg)}
+.pf-acs{display:flex;flex-direction:column;gap:.7rem}
+.pf-ac{background:var(--sur2);border:1px solid var(--br);border-radius:9px;padding:.9rem 1rem;display:flex;align-items:center;gap:.8rem}
+.pf-aci{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.pf-it{background:rgba(94,234,212,.12);color:var(--teal)}
+.pf-iv{background:rgba(129,140,248,.12);color:var(--vio)}
+.pf-ac h4{font-size:.77rem;font-weight:600;margin-bottom:.1rem}
+.pf-ac p{font-size:.68rem;color:var(--fg3)}
+.pf-sg2{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-top:1.75rem}
+.pf-sg{background:var(--sur);border:1px solid var(--br);border-radius:9px;padding:1.25rem}
+.pf-sgl{font-family:'JetBrains Mono',monospace;font-size:.63rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.9rem}
+.pf-sgl.t{color:var(--teal)}.pf-sgl.v{color:var(--vio)}
+.pf-bgs{display:flex;flex-wrap:wrap;gap:.4rem}
+.pf-bg{padding:.25rem .6rem;border-radius:4px;font-size:.68rem;font-weight:500;background:var(--sur2);color:var(--fg2);border:1px solid var(--br);cursor:default;transition:all .2s}
+.pf-bg:hover{color:var(--teal);border-color:rgba(94,234,212,.3)}
+.pf-bg.v:hover{color:var(--vio);border-color:rgba(129,140,248,.3)}
+.pf-pg{display:grid;grid-template-columns:1fr;gap:1.1rem;margin-top:1.75rem}
+.pf-pf{background:var(--bg);border:1px solid var(--br);border-radius:9px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;transition:border-color .25s}
+.pf-pf:hover{border-color:rgba(94,234,212,.25)}
+.pf-pi{overflow:hidden;background:var(--sur2);display:flex;align-items:center;justify-content:center;min-height:180px}
+.pf-pi img{width:100%;height:100%;object-fit:cover}
+.pf-sr{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.pf-pc{background:var(--bg);border:1px solid var(--br);border-radius:9px;overflow:hidden;transition:border-color .25s,transform .2s}
+.pf-pc:hover{border-color:rgba(94,234,212,.2);transform:translateY(-2px)}
+.pf-pc .pf-pi{height:120px;min-height:unset}
+.pf-pb{padding:1rem 1.1rem}
+.pf-pt2{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--teal);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.45rem}
+.pf-pt2.v{color:var(--vio)}
+.pf-pc h3,.pf-pf h3{font-family:'Space Grotesk',sans-serif;font-size:.88rem;font-weight:600;margin-bottom:.45rem}
+.pf-pc p,.pf-pf p{font-size:.75rem;color:var(--fg2);line-height:1.6;margin-bottom:.75rem}
+.pf-tech{display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:.75rem}
+.pf-tech span{padding:.13rem .45rem;border-radius:3px;font-size:.62rem;font-family:'JetBrains Mono',monospace;background:var(--sur2);color:var(--fg3);border:1px solid var(--br)}
+.pf-pl{color:var(--teal);text-decoration:none;font-size:.72rem;font-weight:600}
+.pf-ci{max-width:540px}
+.pf-cls{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.25rem 0}
+.pf-cl{display:flex;align-items:center;gap:.4rem;padding:.55rem 1rem;border-radius:7px;border:1px solid var(--br);color:var(--fg2);text-decoration:none;font-size:.77rem;background:var(--sur);transition:all .2s}
+.pf-cl:hover{border-color:rgba(94,234,212,.3);color:var(--teal)}
+.pf-form{background:var(--sur);border:1px solid var(--br);border-radius:9px;padding:1.25rem}
+.pf-fr{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-bottom:.7rem}
+.pf-fg{display:flex;flex-direction:column;gap:.25rem}
+.pf-fg label{font-size:.68rem;color:var(--fg3)}
+.pf-fg input,.pf-fg textarea{background:var(--sur2);border:1px solid var(--br);color:var(--fg);border-radius:5px;padding:.55rem .8rem;font-size:.78rem;font-family:inherit;outline:none;transition:border-color .2s}
+.pf-fg input:focus,.pf-fg textarea:focus{border-color:rgba(94,234,212,.4)}
+.pf-fg textarea{resize:vertical;min-height:80px}
+.pf-fsub{width:100%;margin-top:.7rem;padding:.7rem;background:var(--teal);color:var(--bg);font-weight:700;font-size:.84rem;border:none;border-radius:7px;cursor:pointer}
+.pf-foot{padding:1.25rem 2rem;text-align:center;font-size:.68rem;color:var(--fg3);border-top:1px solid var(--br)}
+.pf-foot span{color:var(--teal)}
+@media(max-width:520px){.pf-ag,.pf-sg2,.pf-pf,.pf-sr,.pf-fr{grid-template-columns:1fr}.pf-nav-links{display:none}.pf-stats{gap:1.25rem}}
+</style>
+<div class="pf">
+<nav class="pf-nav">
+  <div class="pf-logo">&lt;arv /&gt;</div>
+  <ul class="pf-nav-links">
+    <li><a href="#">About</a></li><li><a href="#">Skills</a></li>
+    <li><a href="#">Projects</a></li><li><a href="#">Contact</a></li>
+  </ul>
+  <a href="#" class="pf-hire">Hire Me</a>
+</nav>
+
+<section class="pf-hero">
+  <div class="pf-hdots"></div>
+  <div class="pf-hi">
+    <div class="pf-pills">
+      <span class="pf-pill pf-pt"><span class="pf-dot"></span> Fullstack Developer</span>
+      <span class="pf-pill pf-pv"><span class="pf-dot"></span> UI/UX Designer</span>
+    </div>
+    <h1 class="pf-h1">Building <em>Scalable</em><br>Web Applications</h1>
+    <p class="pf-sub">Hi, I'm Arvauzan Putra — a Fullstack Developer specializing in Laravel & React, with a strong eye for clean UI and great user experience.</p>
+    <div class="pf-acts">
+      <a href="#" class="pf-bp">View My Work</a>
+      <a href="#" class="pf-bo">Contact Me</a>
+    </div>
+    <div class="pf-stats">
+      <div><div class="pf-sn">5<span>+</span></div><div class="pf-sl">Projects Built</div></div>
+      <div><div class="pf-sn">3<span>+</span></div><div class="pf-sl">Years Learning</div></div>
+      <div><div class="pf-sn">3.62</div><div class="pf-sl">GPA</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pf-sec sur">
+  <p class="pf-lbl">// about me</p>
+  <h2 class="pf-sh">Dev by skill,<br>designer by instinct.</h2>
+  <div class="pf-ag">
+    <div class="pf-at">
+      <p>Saya seorang <strong>Fullstack Developer</strong> dengan pengalaman membangun aplikasi web end-to-end — dari database dan backend logic, hingga tampilan antarmuka yang bersih dan intuitif.</p>
+      <p>Terbiasa bekerja dengan <strong>Laravel, React, dan Inertia.js</strong>. Kemampuan desain di <strong>Figma</strong> membuat saya bisa menjembatani kebutuhan teknis dan visual dalam satu tim.</p>
+      <p>Menyelesaikan studi Teknik Informatika di <strong>Universitas Gunadarma</strong> (GPA 3.62), fokus pada sistem web dan IoT.</p>
+      <br>
+      <a href="https://arpojan.github.io/assets/CV%20Arvauzan.pdf" class="pf-bp" style="display:inline-flex;align-items:center;gap:.35rem;font-size:.78rem"><i class="ti ti-download" aria-hidden="true"></i> Download CV</a>
+    </div>
+    <div class="pf-acs">
+      <div class="pf-ac"><div class="pf-aci pf-it"><i class="ti ti-code" aria-hidden="true"></i></div><div><h4>Fullstack Development</h4><p>Laravel · React · Inertia.js · Next.js · API</p></div></div>
+      <div class="pf-ac"><div class="pf-aci pf-iv"><i class="ti ti-palette" aria-hidden="true"></i></div><div><h4>UI/UX & Design</h4><p>Figma · Photoshop · Illustrator · Tailwind</p></div></div>
+      <div class="pf-ac"><div class="pf-aci pf-it"><i class="ti ti-cpu" aria-hidden="true"></i></div><div><h4>Hardware Integration</h4><p>ESP32 · IoT · RESTful API · Sensor</p></div></div>
+      <div class="pf-ac"><div class="pf-aci pf-iv"><i class="ti ti-brand-git" aria-hidden="true"></i></div><div><h4>Tools & Workflow</h4><p>Git · MySQL · Spatie · Vite · Vercel</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pf-sec">
+  <p class="pf-lbl">// technical arsenal</p>
+  <h2 class="pf-sh">Core Competencies</h2>
+  <p class="pf-ss">Full stack and design spectrum — from API to pixel.</p>
+  <div class="pf-sg2">
+    <div class="pf-sg">
+      <div class="pf-sgl t"><i class="ti ti-bolt" aria-hidden="true" style="margin-right:.25rem"></i>Fullstack Dev</div>
+      <div class="pf-bgs">
+        <span class="pf-bg">Laravel</span><span class="pf-bg">React</span><span class="pf-bg">Next.js</span>
+        <span class="pf-bg">Inertia.js</span><span class="pf-bg">Node.js</span><span class="pf-bg">JavaScript</span>
+        <span class="pf-bg">PHP</span><span class="pf-bg">MySQL</span><span class="pf-bg">REST API</span>
+        <span class="pf-bg">Tailwind CSS</span><span class="pf-bg">Bootstrap</span><span class="pf-bg">Vite</span>
+      </div>
+    </div>
+    <div class="pf-sg">
+      <div class="pf-sgl v"><i class="ti ti-sparkles" aria-hidden="true" style="margin-right:.25rem"></i>Design & Tools</div>
+      <div class="pf-bgs">
+        <span class="pf-bg v">Figma</span><span class="pf-bg v">Photoshop</span><span class="pf-bg v">Illustrator</span>
+        <span class="pf-bg v">Canva</span><span class="pf-bg v">HTML/CSS</span><span class="pf-bg v">Git</span>
+        <span class="pf-bg v">GitHub</span><span class="pf-bg v">Spatie</span>
+        <span class="pf-bg v">ESP32</span><span class="pf-bg v">Premiere Pro</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pf-sec sur">
+  <p class="pf-lbl">// selected work</p>
+  <h2 class="pf-sh">Projects</h2>
+  <p class="pf-ss">Dari platform booking venue hingga sistem IoT berbasis AI.</p>
+  <div class="pf-pg">
+    <div class="pf-pf">
+      <div class="pf-pi"><img src="https://arpojan.github.io/assets/Sparring.png" alt="SPARRING" onerror="this.parentElement.innerHTML='<span style=\'font-family:monospace;font-size:.7rem;color:#3D4D66\'>sparring.png</span>'"></div>
+      <div class="pf-pb">
+        <p class="pf-pt2">⭐ Internship · Suitmedia</p>
+        <h3>SPARRING — Platform Venue Olahraga</h3>
+        <p>Platform booking venue berbasis web untuk menemukan partner dan venue olahraga. Dikembangkan sebagai fullstack dev selama internship di Suitmedia.</p>
+        <div class="pf-tech"><span>Laravel 11</span><span>React</span><span>Inertia.js</span><span>Tailwind CSS</span></div>
+        <a href="https://arpojan.github.io/assets/SPARRING.pdf" class="pf-pl">Detail Project →</a>
+      </div>
+    </div>
+    <div class="pf-sr">
+      <div class="pf-pc">
+        <div class="pf-pi"><img src="https://arpojan.github.io/assets/home matano.png" alt="Matano" onerror="this.parentElement.innerHTML='<span style=\'font-family:monospace;font-size:.7rem;color:#3D4D66\'>matano.png</span>'"></div>
+        <div class="pf-pb">
+          <p class="pf-pt2">Personal Project</p><h3>Matano Aquarent — Booking</h3>
+          <p>Sistem pemesanan akuarium online. Laravel MVC end-to-end.</p>
+          <div class="pf-tech"><span>Laravel</span><span>MySQL</span><span>Bootstrap</span></div>
+          <a href="https://arpojan.github.io/assets/more matano.pdf" class="pf-pl">Detail →</a>
+        </div>
+      </div>
+      <div class="pf-pc">
+        <div class="pf-pi"><img src="https://arpojan.github.io/assets/home leet.png" alt="Leet" onerror="this.parentElement.innerHTML='<span style=\'font-family:monospace;font-size:.7rem;color:#3D4D66\'>leet.png</span>'"></div>
+        <div class="pf-pb">
+          <p class="pf-pt2">Personal Project</p><h3>Leet — E-Commerce</h3>
+          <p>Website e-commerce lengkap. Figma → Laravel, konsisten dari desain ke kode.</p>
+          <div class="pf-tech"><span>Laravel</span><span>Figma</span><span>Tailwind</span></div>
+          <a href="https://arpojan.github.io/assets/more leet.pdf" class="pf-pl">Detail →</a>
+        </div>
+      </div>
+      <div class="pf-pc">
+        <div class="pf-pi"><img src="https://arpojan.github.io/assets/company profile.png" alt="CP" onerror="this.parentElement.innerHTML='<span style=\'font-family:monospace;font-size:.7rem;color:#3D4D66\'>cp.png</span>'"></div>
+        <div class="pf-pb">
+          <p class="pf-pt2">Personal Project</p><h3>Matano — Company Profile</h3>
+          <p>Website company profile penyedia jasa sewa akuarium profesional.</p>
+          <div class="pf-tech"><span>HTML/CSS</span><span>JavaScript</span></div>
+          <a href="https://arpojan.github.io/assets/company profile.pdf" class="pf-pl">Detail →</a>
+        </div>
+      </div>
+      <div class="pf-pc">
+        <div class="pf-pi"><img src="https://arpojan.github.io/assets/Artboard 1.jpg" alt="GKN" onerror="this.parentElement.innerHTML='<span style=\'font-family:monospace;font-size:.7rem;color:#3D4D66\'>gkn.jpg</span>'"></div>
+        <div class="pf-pb">
+          <p class="pf-pt2 v">Freelance · Graphic Design</p><h3>GKN — Brand Identity</h3>
+          <p>Logo, materi marketing, dan panduan brand identity untuk GKN.</p>
+          <div class="pf-tech"><span>Photoshop</span><span>Illustrator</span></div>
+          <a href="https://arpojan.github.io/assets/Design.pdf" class="pf-pl">Detail →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pf-sec">
+  <div class="pf-ci">
+    <p class="pf-lbl">// get in touch</p>
+    <h2 class="pf-sh">Let's Work Together</h2>
+    <p class="pf-ss">Terbuka untuk peluang kerja, freelance, atau sekadar ngobrol soal project baru.</p>
+    <div class="pf-cls">
+      <a href="mailto:arvauzanp@gmail.com" class="pf-cl"><i class="ti ti-mail" aria-hidden="true"></i> arvauzanp@gmail.com</a>
+      <a href="https://linkedin.com/in/arvauzan" class="pf-cl" target="_blank"><i class="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn</a>
+      <a href="https://github.com/arpojan" class="pf-cl" target="_blank"><i class="ti ti-brand-github" aria-hidden="true"></i> GitHub</a>
+    </div>
+    <div class="pf-form">
+      <div class="pf-fr">
+        <div class="pf-fg"><label>Name</label><input type="text" placeholder="Your name"></div>
+        <div class="pf-fg"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+      </div>
+      <div class="pf-fg"><label>Message</label><textarea placeholder="Tell me about your project..."></textarea></div>
+      <button class="pf-fsub">Send Message →</button>
+    </div>
+  </div>
+</section>
+
+<footer class="pf-foot">© 2026 <span>Arvauzan Putra</span>. Built with Next.js & Tailwind CSS.</footer>
+</div>
