@@ -9,18 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#020C1B",
-        sur: "#071524",
-        "sur-2": "#0D1E33",
-        "accent-cy": "#00D4FF",
-        "accent-bl": "#4F8EF7",
-        "fg-1": "#E8F4FD",
-        "fg-2": "#7BA8CC",
-        "fg-3": "#1E3A5A",
+        bg: "#020617",
+        sur: "#0f172a",
+        "sur-2": "#1e293b",
+        "fg-1": "#f8fafc",
+        "fg-2": "#94a3b8",
+        "fg-3": "#64748b",
+        "accent-cy": "#3b82f6",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
-        display: ["Jost", "sans-serif"],
+        display: ["Inter", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
       },
     },

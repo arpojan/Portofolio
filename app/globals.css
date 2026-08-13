@@ -13,9 +13,9 @@
     inset: 0;
     z-index: 0;
     background-image: 
-      radial-gradient(circle at 15% 60%, rgba(0, 212, 255, 0.08) 0%, transparent 45%),
-      radial-gradient(circle at 85% 20%, rgba(79, 142, 247, 0.1) 0%, transparent 40%),
-      radial-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+      radial-gradient(circle at 15% 60%, rgba(59, 130, 246, 0.06) 0%, transparent 45%), /* Corporate Blue */
+      radial-gradient(circle at 85% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 40%), /* Indigo */
+      radial-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px);
     background-size: 100% 100%, 100% 100%, 28px 28px;
     animation: glow-move 15s ease-in-out infinite alternate;
   }
