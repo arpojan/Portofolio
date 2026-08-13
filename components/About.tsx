@@ -41,7 +41,7 @@ export default function About() {
           >
             <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent z-10"></div>
             <Image 
-              src="https://placehold.co/600x800/13131A/4F46E5?text=Profile+Photo" 
+              src="/assets/profile.jpg" 
               alt="Arvauzan Putra" 
               fill 
               className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
