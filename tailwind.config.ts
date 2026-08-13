@@ -9,13 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#020617",
-        sur: "#0f172a",
-        "sur-2": "#1e293b",
-        "fg-1": "#f8fafc",
-        "fg-2": "#94a3b8",
-        "fg-3": "#64748b",
-        "accent-cy": "#3b82f6",
+        bg: '#F8FAFC',
+        sur: '#FFFFFF',
+        'sur-2': '#F1F5F9',
+        'fg-1': '#0F172A',
+        'fg-2': '#475569',
+        'fg-3': '#94A3B8',
+        'accent-cy': '#0EA5E9', // Cheerful Sky Blue
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],

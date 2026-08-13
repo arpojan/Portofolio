@@ -8,7 +8,7 @@ export default function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="sticky top-0 z-50 flex items-center justify-between py-[1.1rem] px-8 border-b border-white/5 bg-bg/80 backdrop-blur-md"
+      className="sticky top-0 z-50 flex items-center justify-between py-[1.1rem] px-8 border-b border-black/5 bg-bg/80 backdrop-blur-md"
     >
       <motion.div 
         whileHover={{ scale: 1.05 }}
@@ -27,7 +27,7 @@ export default function Navbar() {
         ))}
       </ul>
       <motion.a 
-        whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(0, 212, 255, 0.4)" }}
+        whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(14, 165, 233, 0.4)" }}
         whileTap={{ scale: 0.95 }}
         href="#contact" 
         className="py-1.5 px-4 bg-accent-cy text-bg rounded-md no-underline text-[0.78rem] font-bold transition-all"

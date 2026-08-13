@@ -16,7 +16,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-12 px-8 border-b border-white/5 bg-sur relative overflow-hidden">
+    <section id="about" className="py-12 px-8 border-b border-black/5 bg-sur relative overflow-hidden">
       <motion.p 
         initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}
         className="font-mono text-[0.65rem] text-accent-cy tracking-[0.15em] uppercase mb-2"
@@ -43,7 +43,7 @@ export default function About() {
           </p>
           <br />
           <motion.a 
-            whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(0, 212, 255, 0.4)" }}
+            whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(14, 165, 233, 0.4)" }}
             whileTap={{ scale: 0.95 }}
             href="https://arpojan.github.io/assets/CV%20Arvauzan.pdf" 
             className="inline-flex items-center gap-1.5 py-2.5 px-6 bg-accent-cy text-bg font-bold text-[0.78rem] rounded-md no-underline transition-all"
@@ -61,7 +61,7 @@ export default function About() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <div className="bg-sur/50 border border-white/5 hover:border-white/10 hover:bg-sur transition-colors rounded-[8px] p-4 flex items-center gap-3">
+              <div className="bg-sur/50 border border-black/5 hover:border-black/10 hover:bg-sur transition-colors rounded-[8px] p-4 flex items-center gap-3">
                 <div className={`w-9 h-9 rounded-md flex items-center justify-center text-[1rem] shrink-0 ${card.bgClass} ${card.colorClass}`}>
                   <i className={`ti ${card.icon}`} aria-hidden="true"></i>
                 </div>

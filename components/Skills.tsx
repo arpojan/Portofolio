@@ -19,7 +19,7 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-12 px-8 border-b border-white/5 bg-bg relative overflow-hidden">
+    <section id="skills" className="py-12 px-8 border-b border-black/5 bg-bg relative overflow-hidden">
       <div className="relative z-10 max-w-4xl mx-auto">
         <motion.p 
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}
@@ -43,7 +43,7 @@ export default function Skills() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
           <motion.div 
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants}
-            className="bg-sur/50 border border-white/5 rounded-[8px] p-6 h-full hover:border-white/10 transition-colors"
+            className="bg-sur/50 border border-black/5 rounded-[8px] p-6 h-full hover:border-black/10 transition-colors"
           >
             <div className="font-mono text-[0.7rem] uppercase tracking-[0.1em] mb-4 text-accent-cy flex items-center">
               <i className="ti ti-bolt mr-1.5" aria-hidden="true"></i>Fullstack Dev
@@ -53,7 +53,7 @@ export default function Skills() {
                 <motion.span 
                   variants={itemVariants}
                   key={skill} 
-                  className="px-2.5 py-1.5 rounded-[4px] text-[0.72rem] font-medium bg-sur text-fg-2 border border-white/5 cursor-default hover:bg-white/5 transition-colors duration-200"
+                  className="px-2.5 py-1.5 rounded-[4px] text-[0.72rem] font-medium bg-sur text-fg-2 border border-black/5 cursor-default hover:bg-black/5 transition-colors duration-200"
                 >
                   {skill}
                 </motion.span>
@@ -63,7 +63,7 @@ export default function Skills() {
           
           <motion.div 
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants}
-            className="bg-sur/50 border border-white/5 rounded-[8px] p-6 h-full hover:border-white/10 transition-colors"
+            className="bg-sur/50 border border-black/5 rounded-[8px] p-6 h-full hover:border-black/10 transition-colors"
           >
             <div className="font-mono text-[0.7rem] uppercase tracking-[0.1em] mb-4 text-[#818CF8] flex items-center">
               <i className="ti ti-sparkles mr-1.5" aria-hidden="true"></i>Design & Tools
@@ -73,7 +73,7 @@ export default function Skills() {
                 <motion.span 
                   variants={itemVariants}
                   key={skill} 
-                  className="px-2.5 py-1.5 rounded-[4px] text-[0.72rem] font-medium bg-sur text-fg-2 border border-white/5 cursor-default hover:bg-white/5 transition-colors duration-200"
+                  className="px-2.5 py-1.5 rounded-[4px] text-[0.72rem] font-medium bg-sur text-fg-2 border border-black/5 cursor-default hover:bg-black/5 transition-colors duration-200"
                 >
                   {skill}
                 </motion.span>

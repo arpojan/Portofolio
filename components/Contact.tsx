@@ -51,7 +51,7 @@ export default function Contact() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               href={link.href} target={link.text !== "arvauzanp@gmail.com" ? "_blank" : undefined} rel={link.text !== "arvauzanp@gmail.com" ? "noopener noreferrer" : undefined} 
-              className="flex items-center gap-2 py-2 px-4 rounded-[4px] border border-white/5 text-fg-2 no-underline text-[0.8rem] bg-sur hover:bg-white/5 hover:text-fg-1 transition-colors"
+              className="flex items-center gap-2 py-2 px-4 rounded-[4px] border border-black/5 text-fg-2 no-underline text-[0.8rem] bg-sur hover:bg-black/5 hover:text-fg-1 transition-colors"
             >
               <i className={`ti ${link.icon} text-[1.1rem]`} aria-hidden="true"></i> {link.text}
             </motion.a>

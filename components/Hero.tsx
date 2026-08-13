@@ -20,7 +20,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="pt-20 px-8 pb-16 relative overflow-hidden border-b border-white/5 flex flex-col items-center text-center">
+    <section className="pt-20 px-8 pb-16 relative overflow-hidden border-b border-black/5 flex flex-col items-center text-center">
 
       <motion.div 
         className="relative z-10"
@@ -30,7 +30,7 @@ export default function Hero() {
       >
         <motion.div variants={itemVariants} className="flex justify-center gap-2.5 mb-6 flex-wrap">
           <motion.span 
-            whileHover={{ scale: 1.05, boxShadow: "0 0 10px rgba(0, 212, 255, 0.2)" }}
+            whileHover={{ scale: 1.05, boxShadow: "0 0 10px rgba(14, 165, 233, 0.2)" }}
             className="inline-flex items-center gap-1.5 py-1 px-3 rounded-full font-mono text-[0.68rem] font-medium border text-accent-cy border-accent-cy/30 bg-accent-cy/10 backdrop-blur-sm transition-colors cursor-default"
           >
             <span className="pf-dot"></span> Fullstack Developer
@@ -61,16 +61,16 @@ export default function Hero() {
             View My Work
           </motion.a>
           <motion.a 
-            whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 0.05)" }}
+            whileHover={{ scale: 1.02, backgroundColor: "rgba(0, 0, 0, 0.05)" }}
             whileTap={{ scale: 0.95 }}
             href="#contact" 
-            className="py-2.5 px-6 border border-white/5 text-fg-1 font-medium text-[0.84rem] rounded-md no-underline backdrop-blur-sm transition-all"
+            className="py-2.5 px-6 border border-black/5 text-fg-1 font-medium text-[0.84rem] rounded-md no-underline backdrop-blur-sm transition-all"
           >
             Contact Me
           </motion.a>
         </motion.div>
         
-        <motion.div variants={itemVariants} className="flex justify-center gap-10 sm:gap-16 border-t border-white/5 pt-8 inline-flex mx-auto">
+        <motion.div variants={itemVariants} className="flex justify-center gap-10 sm:gap-16 border-t border-black/5 pt-8 inline-flex mx-auto">
           <motion.div whileHover={{ y: -3 }}>
             <div className="font-display text-[1.6rem] font-bold">5<span className="text-accent-cy">+</span></div>
             <div className="text-[0.68rem] text-fg-3 mt-0.5">Projects Built</div>
