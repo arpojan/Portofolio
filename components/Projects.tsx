@@ -67,7 +67,7 @@ export default function Projects() {
                     <div className="absolute top-4 right-4 z-20 text-[0.7rem] font-mono text-fg-3 font-bold">
                       0{i + 1}
                     </div>
-                    <Image src={`/assets/${project.img}`} alt={project.title} width={600} height={400} unoptimized className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
+                    <Image src={`/portofolio/assets/${project.img}`} alt={project.title} width={600} height={400} unoptimized className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
                   </div>
                   
                   <div className="relative z-10 p-6 sm:p-8 flex-grow flex flex-col bg-sur">

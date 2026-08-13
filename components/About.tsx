@@ -19,38 +19,38 @@ export default function About() {
   return (
     <section id="about" className="py-24 px-8 border-b border-white/5 bg-sur relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <motion.p 
+        <motion.p
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}
           className="font-mono text-[0.65rem] text-accent-cy tracking-[0.15em] uppercase mb-3 text-center"
         >
           // 01. About
         </motion.p>
-        <motion.h2 
+        <motion.h2
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}
           className="font-display text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight mb-12 text-center"
         >
           Who Am I?
         </motion.h2>
-      
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 mt-7 items-stretch">
-          
+
           {/* 1. Profile Photo */}
-          <motion.div 
+          <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}
             className="lg:col-span-4 relative rounded-[16px] overflow-hidden border border-white/10 group aspect-[4/5] bg-sur-2 shadow-xl"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent z-10"></div>
-            <Image 
-              src="/assets/profile.jpg" 
-              alt="Arvauzan Putra" 
-              fill 
-              className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
-              unoptimized 
+            <Image
+              src="/portofolio/assets/profile.jpg"
+              alt="Arvauzan Putra"
+              fill
+              className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+              unoptimized
             />
           </motion.div>
 
           {/* 2. Text Content */}
-          <motion.div 
+          <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}
             className="lg:col-span-4 flex flex-col justify-center"
           >
@@ -64,21 +64,21 @@ export default function About() {
               Menyelesaikan studi Teknik Informatika di <strong className="text-fg-1 font-semibold">Universitas Gunadarma</strong> (GPA 3.62), fokus pada sistem web dan IoT.
             </p>
             <div className="mt-auto">
-              <motion.a 
+              <motion.a
                 whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(14, 165, 233, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
-                href="https://arpojan.github.io/assets/CV%20Arvauzan.pdf" 
+                href="https://arpojan.github.io/assets/CV%20Arvauzan.pdf"
                 className="inline-flex items-center gap-1.5 py-2.5 px-6 bg-accent-cy text-bg font-bold text-[0.78rem] rounded-md no-underline transition-all"
               >
                 <i className="ti ti-download text-[1rem]"></i> Download CV
               </motion.a>
             </div>
           </motion.div>
-          
+
           {/* 3. Skill Cards */}
           <div className="lg:col-span-4 flex flex-col gap-3">
             {cards.map((card, i) => (
-              <motion.div 
+              <motion.div
                 key={card.title}
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
