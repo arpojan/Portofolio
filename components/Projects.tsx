@@ -20,8 +20,8 @@ export default function Projects() {
   };
 
   const projects = [
-    { img: "skripsi.jpg", tag: "Thesis", title: "Skripsi — Web & IoT", desc: "Sistem website terintegrasi dengan hardware IoT (ESP32) untuk proyek tugas akhir skripsi.", tech: ["Laravel", "React", "IoT", "ESP32"], link: "Skripsi.pdf", github: "https://github.com/arpojan/Monitoring-Enclosure" },
-    { img: "bulog.jpg", tag: "Freelance", title: "Perum BULOG — Sistem Internal", desc: "Pengembangan sistem internal/dashboard saat magang untuk pengelolaan data operasional Bulog.", tech: ["PHP", "MySQL", "Bootstrap"], link: "Bulog", github: "#" },
+    { img: "Skripsi.jpg", tag: "Thesis", title: "Skripsi — Web & IoT", desc: "Sistem website terintegrasi dengan hardware IoT (ESP32) untuk proyek tugas akhir skripsi.", tech: ["Laravel", "React", "IoT", "ESP32"], link: "Skripsi.pdf", github: "https://github.com/arpojan/Monitoring-Enclosure" },
+    { img: "Bulog.jpg", tag: "Freelance", title: "Perum BULOG — Sistem Internal", desc: "Pengembangan sistem internal/dashboard saat magang untuk pengelolaan data operasional Bulog.", tech: ["PHP", "MySQL", "Bootstrap"], link: "Bulog", github: "#" },
     { img: "Sparring.jpg", tag: "Freelance", title: "SPARRING", desc: "Aplikasi penyedia lawan & teman olahraga. (Tim — Frontend Dev).", tech: ["Laravel 11", "React", "Inertia", "Tailwind"], link: "Sparring.pdf", github: "#" },
     { img: "home leet.jpg", tag: "Personal", title: "Leet — E-Commerce", desc: "Website e-commerce lengkap. Figma → Laravel, konsisten dari desain ke kode.", tech: ["Laravel", "Figma", "Tailwind"], link: "Leet.pdf", github: "#" },
     { img: "Matano.jpg", tag: "Personal", title: "Matano — Profile", desc: "Website penyedia jasa sewa akuarium profesional.", tech: ["HTML/CSS", "JS"], link: "Matano.pdf", github: "#" },
