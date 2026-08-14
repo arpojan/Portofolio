@@ -37,7 +37,7 @@ export default function About() {
           {/* 1. Profile Photo */}
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}
-            className="lg:col-span-4 relative rounded-[16px] overflow-hidden border border-white/10 group aspect-[4/5] bg-sur-2 shadow-xl"
+            className="lg:col-span-4 relative rounded-[16px] overflow-hidden border border-white/10 group h-[350px] sm:h-[450px] lg:h-auto lg:aspect-[4/5] bg-sur-2 shadow-xl"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent z-10"></div>
             <Image
