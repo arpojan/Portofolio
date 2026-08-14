@@ -41,10 +41,10 @@ export default function Contact() {
           className="grid grid-cols-2 gap-4 my-10 w-full max-w-[500px] mx-auto"
         >
           {[
-            { icon: "ti-brand-whatsapp", text: "WhatsApp", href: "https://wa.me/6285711290246", color: "group-hover:text-[#25D366] group-hover:border-[#25D366]/50" },
-            { icon: "ti-mail", text: "Email", href: "mailto:arvauzanp@gmail.com", color: "group-hover:text-accent-coral group-hover:border-accent-coral/50" },
-            { icon: "ti-brand-linkedin", text: "LinkedIn", href: "https://linkedin.com/in/arvauzan", color: "group-hover:text-[#0A66C2] group-hover:border-[#0A66C2]/50" },
-            { icon: "ti-brand-github", text: "GitHub", href: "https://github.com/arpojan", color: "group-hover:text-fg-1 group-hover:border-white/50" }
+            { icon: "ti-brand-whatsapp", text: "WhatsApp", caption: "+62 857-1129-0246", href: "https://wa.me/6285711290246", color: "group-hover:text-[#25D366] group-hover:border-[#25D366]/50" },
+            { icon: "ti-mail", text: "Email", caption: "arvauzanp@gmail.com", href: "mailto:arvauzanp@gmail.com", color: "group-hover:text-accent-coral group-hover:border-accent-coral/50" },
+            { icon: "ti-brand-linkedin", text: "LinkedIn", caption: "in/arvauzan", href: "https://linkedin.com/in/arvauzan", color: "group-hover:text-[#0A66C2] group-hover:border-[#0A66C2]/50" },
+            { icon: "ti-brand-github", text: "GitHub", caption: "arpojan", href: "https://github.com/arpojan", color: "group-hover:text-fg-1 group-hover:border-white/50" }
           ].map((link, i) => (
             <motion.a
               key={i}
@@ -55,7 +55,10 @@ export default function Contact() {
               className={`group flex flex-col items-center justify-center gap-3 py-6 px-4 rounded-[12px] border border-white/5 bg-sur/50 text-fg-2 no-underline transition-all duration-300 hover:bg-white/5 ${link.color}`}
             >
               <i className={`ti ${link.icon} text-[2rem] transition-colors`} aria-hidden="true"></i>
-              <span className="text-[0.8rem] font-medium font-mono">{link.text}</span>
+              <div className="flex flex-col items-center gap-1">
+                <span className="text-[0.9rem] font-bold font-display">{link.text}</span>
+                <span className="text-[0.7rem] font-mono opacity-60 text-center select-all">{link.caption}</span>
+              </div>
             </motion.a>
           ))}
         </motion.div>
