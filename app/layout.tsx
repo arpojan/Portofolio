@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Arvauzan Putra — Fullstack Developer",
-  description: "Portfolio of Arvauzan Putra, Fullstack Developer & UI/UX Designer based in Jakarta",
+  title: "Arvauzan Putra Kurniawan",
+  description: "Portfolio of Arvauzan Putra, Fullstack Developer & Graphic Designer based in Jakarta",
 };
 
 export default function RootLayout({
