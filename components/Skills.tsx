@@ -13,22 +13,23 @@ export default function Skills() {
     { name: "Next.js", weight: "text-[2.5rem] text-fg-1 font-bold opacity-100" },
     { name: "Laravel", weight: "text-[2.2rem] text-[#FF2D20] font-bold opacity-100" },
     { name: "Tailwind CSS", weight: "text-[1.8rem] text-[#38B2AC] font-semibold opacity-90" },
-    { name: "TypeScript", weight: "text-[1.6rem] text-[#3178C6] font-semibold opacity-90" },
+    { name: "Bootstrap", weight: "text-[1.6rem] text-[#3178C6] font-semibold opacity-90" },
     { name: "JavaScript", weight: "text-[1.8rem] text-[#F7DF1E] font-semibold opacity-90" },
     { name: "PHP", weight: "text-[1.5rem] text-[#777BB4] font-medium opacity-80" },
     { name: "MySQL", weight: "text-[1.4rem] text-[#4479A1] font-medium opacity-80" },
     { name: "Figma", weight: "text-[2rem] text-[#F24E1E] font-bold opacity-90" },
-    { name: "UI/UX Design", weight: "text-[1.7rem] text-accent-coral font-semibold opacity-90" },
-    { name: "Git", weight: "text-[1.3rem] text-[#F05032] font-medium opacity-70" },
-    { name: "Postman", weight: "text-[1.2rem] text-[#FF6C37] opacity-60" },
+    { name: "Canva", weight: "text-[2rem] text-accent-cy font-bold opacity-100" },
+    { name: "Photoshop", weight: "text-[1.7rem] text-accent-coral font-semibold opacity-90" },
+    { name: "Git", weight: "text-[1.3rem] text-[#F05032] font-bold opacity-90" },
+    { name: "Postman", weight: "text-[1.2rem] text-[#FF6C37] opacity-80" },
     { name: "Inertia.js", weight: "text-[1.5rem] text-[#9553E9] font-medium opacity-80" },
-    { name: "Framer Motion", weight: "text-[1.4rem] text-pink-500 font-medium opacity-80" },
+    { name: "Blade", weight: "text-[1.4rem] text-pink-500 font-medium opacity-90" },
   ];
 
   return (
     <section id="skills" className="py-24 px-8 border-b border-white/5 bg-sur relative overflow-hidden">
       <div className="max-w-5xl mx-auto text-center">
-        <motion.div 
+        <motion.div
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}
           className="mb-16"
         >

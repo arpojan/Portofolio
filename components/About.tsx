@@ -10,10 +10,10 @@ export default function About() {
   };
 
   const cards = [
-    { title: "Fullstack Development", skills: "Laravel · React · Inertia.js · Next.js · API", icon: "ti-code", colorClass: "text-[#818CF8]", bgClass: "bg-[#818CF8]/10" },
-    { title: "UI/UX & Design", skills: "Figma · Photoshop · Illustrator · Tailwind", icon: "ti-color-swatch", colorClass: "text-[#A78BFA]", bgClass: "bg-[#A78BFA]/10" },
+    { title: "Fullstack Development", skills: "Laravel · React · Inertia.js · Next.js ·CSS", icon: "ti-code", colorClass: "text-[#818CF8]", bgClass: "bg-[#818CF8]/10" },
+    { title: "Graphic & UI Design", skills: "Figma · Photoshop · Illustrator · Canva", icon: "ti-color-swatch", colorClass: "text-[#A78BFA]", bgClass: "bg-[#A78BFA]/10" },
     { title: "Hardware Integration", skills: "ESP32 · IoT · RESTful API · Sensor", icon: "ti-cpu", colorClass: "text-[#60A5FA]", bgClass: "bg-[#60A5FA]/10" },
-    { title: "Tools & Workflow", skills: "Git · MySQL · Spatie · Vite · Vercel", icon: "ti-tool", colorClass: "text-[#94A3B8]", bgClass: "bg-[#94A3B8]/10" }
+    { title: "Tools & Workflow", skills: "Git · MySQL · Spatie · Vite · Railwayx", icon: "ti-tool", colorClass: "text-[#94A3B8]", bgClass: "bg-[#94A3B8]/10" }
   ];
 
   return (
@@ -58,10 +58,11 @@ export default function About() {
               Saya seorang <strong className="text-fg-1 font-semibold">Fullstack Developer</strong> dengan pengalaman membangun aplikasi web end-to-end — dari database dan backend logic, hingga tampilan antarmuka yang bersih dan intuitif.
             </p>
             <p className="text-fg-2 text-[0.84rem] leading-[1.8] mb-4">
-              Terbiasa bekerja dengan <strong className="text-fg-1 font-semibold">Laravel, React, dan Inertia.js</strong>. Kemampuan desain di <strong className="text-fg-1 font-semibold">Figma</strong> membuat saya bisa menjembatani kebutuhan teknis dan visual dalam satu tim.
+              Terbiasa bekerja dengan <strong className="text-fg-1 font-semibold">Laravel, React, dan Inertia.js</strong>. Kemampuan desain — dari UI di Figma hingga grafis di Photoshop & Illustrator —
+              membuat saya bisa menangani visual dan teknis sekaligus.
             </p>
             <p className="text-fg-2 text-[0.84rem] leading-[1.8] mb-6">
-              Menyelesaikan studi Teknik Informatika di <strong className="text-fg-1 font-semibold">Universitas Gunadarma</strong> (GPA 3.62), fokus pada sistem web dan IoT.
+              Mahasiswa semester akhir di <strong className="text-fg-1 font-semibold">Universitas Gunadarma</strong> (IPK 3.62), dengan skripsi yang fokus pada sistem website dan integrasi IoT.
             </p>
             <div className="mt-auto">
               <motion.a
