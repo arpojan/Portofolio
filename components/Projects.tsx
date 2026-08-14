@@ -20,12 +20,12 @@ export default function Projects() {
   };
 
   const projects = [
-    { img: "skripsi.png", tag: "Thesis", title: "Skripsi — Web & IoT", desc: "Sistem website terintegrasi dengan hardware IoT (ESP32) untuk proyek tugas akhir skripsi.", tech: ["Laravel", "React", "IoT", "ESP32"], link: "Skripsi.pdf" },
-    { img: "bulog.png", tag: "Freelance", title: "Perum BULOG — Sistem Internal", desc: "Pengembangan sistem internal/dashboard saat magang untuk pengelolaan data operasional Bulog.", tech: ["PHP", "MySQL", "Bootstrap"], link: "Bulog" },
-    { img: "Sparring.png", tag: "Freelance", title: "SPARRING", desc: "Aplikasi penyedia lawan & teman olahraga. (Tim — Frontend Dev).", tech: ["Laravel 11", "React", "Inertia", "Tailwind"], link: "Sparring.pdf" },
-    { img: "home leet.png", tag: "Personal", title: "Leet — E-Commerce", desc: "Website e-commerce lengkap. Figma → Laravel, konsisten dari desain ke kode.", tech: ["Laravel", "Figma", "Tailwind"], link: "Leet.pdf" },
-    { img: "Matano.png", tag: "Personal", title: "Matano — Profile", desc: "Website penyedia jasa sewa akuarium profesional.", tech: ["HTML/CSS", "JS"], link: "Matano.pdf" },
-    { img: "Artboard 1.jpg", tag: "Design", title: "GKN — Brand Identity", desc: "Logo, materi marketing, dan panduan brand identity untuk GKN.", tech: ["Photoshop", "Illustrator"], link: "Design.pdf" }
+    { img: "skripsi.jpg", tag: "Thesis", title: "Skripsi — Web & IoT", desc: "Sistem website terintegrasi dengan hardware IoT (ESP32) untuk proyek tugas akhir skripsi.", tech: ["Laravel", "React", "IoT", "ESP32"], link: "Skripsi.pdf", github: "https://github.com/arpojan/Monitoring-Enclosure" },
+    { img: "bulog.jpg", tag: "Freelance", title: "Perum BULOG — Sistem Internal", desc: "Pengembangan sistem internal/dashboard saat magang untuk pengelolaan data operasional Bulog.", tech: ["PHP", "MySQL", "Bootstrap"], link: "Bulog", github: "#" },
+    { img: "Sparring.jpg", tag: "Freelance", title: "SPARRING", desc: "Aplikasi penyedia lawan & teman olahraga. (Tim — Frontend Dev).", tech: ["Laravel 11", "React", "Inertia", "Tailwind"], link: "Sparring.pdf", github: "#" },
+    { img: "home leet.jpg", tag: "Personal", title: "Leet — E-Commerce", desc: "Website e-commerce lengkap. Figma → Laravel, konsisten dari desain ke kode.", tech: ["Laravel", "Figma", "Tailwind"], link: "Leet.pdf", github: "#" },
+    { img: "Matano.jpg", tag: "Personal", title: "Matano — Profile", desc: "Website penyedia jasa sewa akuarium profesional.", tech: ["HTML/CSS", "JS"], link: "Matano.pdf", github: "#" },
+    { img: "Artboard 1.jpg", tag: "Design", title: "GKN — Brand Identity", desc: "Logo, materi marketing, dan panduan brand identity untuk GKN.", tech: ["Photoshop", "Illustrator"], link: "Design.pdf", github: "#" }
   ];
 
   return (
@@ -86,7 +86,7 @@ export default function Projects() {
                     <a href={`/portofolio/assets/${project.link}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-fg-1 hover:text-accent-cy text-[0.75rem] font-medium transition-colors">
                       <i className="ti ti-external-link text-[1rem]"></i> View Detail
                     </a>
-                    <a href="#" className="flex items-center gap-1.5 text-fg-3 hover:text-fg-1 text-[0.75rem] font-medium transition-colors">
+                    <a href={project.github} target={project.github !== "#" ? "_blank" : undefined} rel="noopener noreferrer" className="flex items-center gap-1.5 text-fg-3 hover:text-fg-1 text-[0.75rem] font-medium transition-colors">
                       <i className="ti ti-brand-github text-[1rem]"></i> Source Code
                     </a>
                   </div>

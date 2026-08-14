@@ -64,14 +64,22 @@ export default function About() {
             <p className="text-fg-2 text-[0.84rem] leading-[1.8] mb-6">
               Mahasiswa semester akhir di <strong className="text-fg-1 font-semibold">Universitas Gunadarma</strong> (IPK 3.62), dengan skripsi yang fokus pada sistem website dan integrasi IoT.
             </p>
-            <div className="mt-auto">
+            <div className="mt-auto flex gap-3">
               <motion.a
                 whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(14, 165, 233, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
-                href="/portofolio/assets/cv.pdf" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 py-2.5 px-6 bg-accent-cy text-bg font-bold text-[0.78rem] rounded-md no-underline transition-all"
+                href="/portofolio/assets/cv-indo.pdf" target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 py-2.5 px-5 bg-accent-cy text-bg font-bold text-[0.75rem] rounded-md no-underline transition-all"
               >
-                <i className="ti ti-download text-[1rem]"></i> Download CV
+                <i className="ti ti-eye text-[1rem]"></i> CV (Ind)
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(255, 255, 255, 0.2)" }}
+                whileTap={{ scale: 0.95 }}
+                href="/portofolio/assets/cv-eng.pdf" target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 py-2.5 px-5 bg-sur border border-white/10 hover:border-white/30 text-fg-1 font-bold text-[0.75rem] rounded-md no-underline transition-all"
+              >
+                <i className="ti ti-eye text-[1rem]"></i> CV (Eng)
               </motion.a>
             </div>
           </motion.div>
