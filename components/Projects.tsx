@@ -83,7 +83,7 @@ export default function Projects() {
                   </div>
 
                   <div className="flex items-center gap-4 mt-auto pt-5 border-t border-white/5">
-                    <a href={`https://arpojan.github.io/assets/${project.link}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-fg-1 hover:text-accent-cy text-[0.75rem] font-medium transition-colors">
+                    <a href={`/portofolio/assets/${project.link}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-fg-1 hover:text-accent-cy text-[0.75rem] font-medium transition-colors">
                       <i className="ti ti-external-link text-[1rem]"></i> View Detail
                     </a>
                     <a href="#" className="flex items-center gap-1.5 text-fg-3 hover:text-fg-1 text-[0.75rem] font-medium transition-colors">
