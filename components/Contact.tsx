@@ -51,7 +51,9 @@ export default function Contact() {
               variants={fadeUp}
               whileHover={{ scale: 1.05, y: -4 }}
               whileTap={{ scale: 0.95 }}
-              href={link.href} target="_blank" rel="noopener noreferrer"
+              href={link.href} 
+              target={link.href.startsWith("mailto:") ? undefined : "_blank"} 
+              rel={link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
               className={`group flex flex-col items-center justify-center gap-3 py-6 px-4 rounded-[12px] border border-white/5 bg-sur/50 text-fg-2 no-underline transition-all duration-300 hover:bg-white/5 ${link.color}`}
             >
               <i className={`ti ${link.icon} text-[2rem] transition-colors`} aria-hidden="true"></i>
