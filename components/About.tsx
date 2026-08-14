@@ -68,7 +68,7 @@ export default function About() {
               <motion.a
                 whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(14, 165, 233, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
-                href="https://arpojan.github.io/assets/CV%20Arvauzan.pdf"
+                href="/portofolio/assets/cv.pdf" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 py-2.5 px-6 bg-accent-cy text-bg font-bold text-[0.78rem] rounded-md no-underline transition-all"
               >
                 <i className="ti ti-download text-[1rem]"></i> Download CV
