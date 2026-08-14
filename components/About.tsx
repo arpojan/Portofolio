@@ -68,7 +68,7 @@ export default function About() {
               <motion.a
                 whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(14, 165, 233, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
-                href="/portofolio/assets/cv-indo.docx" target="_blank" rel="noopener noreferrer"
+                href="/portofolio/assets/cv-indo.pdf" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 py-2.5 px-5 bg-accent-cy text-bg font-bold text-[0.75rem] rounded-md no-underline transition-all"
               >
                 <i className="ti ti-eye text-[1rem]"></i> CV (Ind)
@@ -76,7 +76,7 @@ export default function About() {
               <motion.a
                 whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(255, 255, 255, 0.2)" }}
                 whileTap={{ scale: 0.95 }}
-                href="/portofolio/assets/cv-eng.docx" target="_blank" rel="noopener noreferrer"
+                href="/portofolio/assets/cv-eng.pdf" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 py-2.5 px-5 bg-sur border border-white/10 hover:border-white/30 text-fg-1 font-bold text-[0.75rem] rounded-md no-underline transition-all"
               >
                 <i className="ti ti-eye text-[1rem]"></i> CV (Eng)
