@@ -20,10 +20,10 @@ export default function Projects() {
   };
 
   const projects = [
-    { img: "skripsi.png", tag: "Thesis", title: "Skripsi — Web & IoT", desc: "Sistem website terintegrasi dengan hardware IoT (ESP32) untuk proyek tugas akhir skripsi.", tech: ["Laravel", "React", "IoT", "ESP32"], link: "#" },
-    { img: "bulog.png", tag: "Freelance", title: "Perum BULOG — Sistem Internal", desc: "Pengembangan sistem internal/dashboard saat magang untuk pengelolaan data operasional Bulog.", tech: ["PHP", "MySQL", "Bootstrap"], link: "#" },
+    { img: "skripsi.png", tag: "Thesis", title: "Skripsi — Web & IoT", desc: "Sistem website terintegrasi dengan hardware IoT (ESP32) untuk proyek tugas akhir skripsi.", tech: ["Laravel", "React", "IoT", "ESP32"], link: "Skripsi.pdf" },
+    { img: "bulog.png", tag: "Freelance", title: "Perum BULOG — Sistem Internal", desc: "Pengembangan sistem internal/dashboard saat magang untuk pengelolaan data operasional Bulog.", tech: ["PHP", "MySQL", "Bootstrap"], link: "Bulog" },
     { img: "Sparring.png", tag: "Freelance", title: "SPARRING", desc: "Aplikasi penyedia lawan & teman olahraga. (Tim — Frontend Dev).", tech: ["Laravel 11", "React", "Inertia", "Tailwind"], link: "Sparring.pdf" },
-    { img: "home leet.png", tag: "Personal", title: "Leet — E-Commerce", desc: "Website e-commerce lengkap. Figma → Laravel, konsisten dari desain ke kode.", tech: ["Laravel", "Figma", "Tailwind"], link: "more leet.pdf" },
+    { img: "home leet.png", tag: "Personal", title: "Leet — E-Commerce", desc: "Website e-commerce lengkap. Figma → Laravel, konsisten dari desain ke kode.", tech: ["Laravel", "Figma", "Tailwind"], link: "Leet.pdf" },
     { img: "Matano.png", tag: "Personal", title: "Matano — Profile", desc: "Website penyedia jasa sewa akuarium profesional.", tech: ["HTML/CSS", "JS"], link: "Matano.pdf" },
     { img: "Artboard 1.jpg", tag: "Design", title: "GKN — Brand Identity", desc: "Logo, materi marketing, dan panduan brand identity untuk GKN.", tech: ["Photoshop", "Illustrator"], link: "Design.pdf" }
   ];
