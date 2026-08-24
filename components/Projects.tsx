@@ -20,8 +20,8 @@ export default function Projects() {
   };
 
   const projects = [
-    { img: "Skripsi.jpg", tag: "Thesis", title: "Skripsi — Web & IoT", desc: "Platform monitoring real-time suhu & kelembapan enclosure berbasis IoT (mikrokontroller + Laravel backend). Dilengkapi Sistem Pendukung Keputusan AI yang menghasilkan rekomendasi parameter secara otomatis.", tech: ["Laravel", "React", "IoT", "ESP32"], link: "Skripsi.pdf", github: "https://github.com/arpojan/Monitoring-Enclosure" },
-    { img: "Bulog.jpg", tag: "Freelance", title: "Perum BULOG — Sistem Internal", desc: "Frontend freelance untuk live portal komunitas BULOG — implementasi pixel-perfect dari mockup Figma ke HTML semantik yang responsif, siap di-handoff ke tim backend Laravel.", tech: ["Figma", "HTML", "CSS", "PHP", "MySQL", "Bootstrap"], link: "Bulog", github: "https://github.com/arpojan/Bulog-iuran" },
+    { img: "Skripsi.jpg", tag: "Thesis", title: "Skripsi — Web & IoT", desc: "Platform monitoring real-time suhu & kelembapan enclosure berbasis IoT (mikrokontroller + Laravel backend). Dilengkapi Sistem Pendukung Keputusan AI yang menghasilkan rekomendasi parameter secara otomatis.", tech: ["Laravel", "React", "IoT", "ESP32"], link: "https://lightcoral-hedgehog-859644.hostingersite.com/", github: "https://github.com/arpojan/Monitoring-Enclosure" },
+    { img: "Bulog.jpg", tag: "Freelance", title: "Perum BULOG — Sistem Internal", desc: "Frontend freelance untuk live portal komunitas BULOG — implementasi pixel-perfect dari mockup Figma ke HTML semantik yang responsif, siap di-handoff ke tim backend Laravel.", tech: ["Figma", "HTML", "CSS", "PHP", "MySQL", "Bootstrap"], link: "https://jatimelatibulogtiga.com/", github: "https://github.com/arpojan/Bulog-iuran" },
     { img: "Sparring.jpg", tag: "Freelance", title: "SPARRING", desc: 'Platform Pemesanan Venue Olahraga & Manajemen Komunitas "SPARRING" - (Suitmedia).', tech: ["Laravel", "React", "Inertia", "Tailwind"], link: "Sparring.pdf", github: "https://github.com/arpojan/Sparring" },
     { img: "Leet.jpg", tag: "Personal", title: "Leet — E-Commerce", desc: "Platform e-commerce fashion dengan katalog produk multi-foto, varian produk, dan dual interface (customer & admin). Memimpin desain UI/UX end-to-end di Figma hingga implementasi frontend dalam tim.", tech: ["Laravel", "Figma", "Tailwind"], link: "Leet.pdf", github: "https://github.com/arpojan/Leet-Ecommerce" },
     { img: "Matano.jpg", tag: "Personal", title: "Matano — Profile", desc: "Platform penyewaan akuarium siklus penuh — dari desain UI, skema database, hingga logika bisnis backend — dikerjakan mandiri menggunakan Laravel dalam satu siklus pengembangan penuh.", tech: ["Laravel", "HTML", "CSS", "JS"], link: "Matano.pdf", github: "https://github.com/arpojan/Matano-Aquarent" },
@@ -83,7 +83,7 @@ export default function Projects() {
                   </div>
 
                   <div className="flex items-center gap-4 mt-auto pt-5 border-t border-white/5">
-                    <a href={`/portofolio/assets/${project.link}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-fg-1 hover:text-accent-cy text-[0.75rem] font-medium transition-colors">
+                    <a href={project.link.startsWith('http') ? project.link : `/portofolio/assets/${project.link}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-fg-1 hover:text-accent-cy text-[0.75rem] font-medium transition-colors">
                       <i className="ti ti-external-link text-[1rem]"></i> View Detail
                     </a>
                     <a href={project.github} target={project.github !== "#" ? "_blank" : undefined} rel="noopener noreferrer" className="flex items-center gap-1.5 text-fg-3 hover:text-fg-1 text-[0.75rem] font-medium transition-colors">
